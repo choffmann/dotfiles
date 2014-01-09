@@ -20,6 +20,7 @@ alias j="jobs"
 
 
 alias ipy=ipython
+alias ipydev=/home/chris/shared/common/scripts/ipydev
 alias py=python
 alias py3=python3
 alias gw="gedit --new-window"
