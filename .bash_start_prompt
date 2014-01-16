@@ -1,0 +1,10 @@
+#date
+#uname -a
+
+# has to be installed from https://github.com/KittyKatt/screenFetch
+# cdg && cd 3rd && git clone https://github.com/KittyKatt/screenFetch
+# ln -s $(pwd)/screenFetch/screenfetch-dev ~/bin/screenfetch
+
+# todo: make some automtic detection like:
+# type screenfetch >/dev/null 2>&1 || { echo >&2 "I require screenfetch but it's not installed.  Aborting."; exit 1; }
+screenfetch
