@@ -19,7 +19,7 @@ alias h="history"
 alias j="jobs"
 
 
-alias ipy=ipython
+alias ipy="ipython --matplotlib --pylab=qt"
 alias ipydev=/home/chris/shared/common/scripts/ipydev
 alias py=python
 alias py3=python3
