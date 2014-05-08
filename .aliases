@@ -8,10 +8,14 @@ alias -- -="cd -"
 
 # Shortcuts
 alias cdg="cd $GITHUB_PATH"
+alias cdg-chirs="cd $GITHUB_PATH/chris"
+alias cdg-3rd="cd $GITHUB_PATH/3rd"
 alias cdd="cd $DROPBOX_PATH"
 alias cddl="cd ~/Downloads"
 alias cddt="cd ~/Desktop"
 alias cdp="cd $PROJECTS_PATH"
+alias cdc="cd $CUR_PROJECT_PATH" 	# only for work
+alias cdgitrep='cd $GIT_REP_PATH' 	# only for work
 alias g="git"
 alias ggui="git gui &"
 alias gk="gitk"
@@ -19,7 +23,7 @@ alias h="history"
 alias j="jobs"
 
 
-alias ipy=ipython
+alias ipy="ipython --matplotlib --pylab=qt"
 alias ipydev=/home/chris/shared/common/scripts/ipydev
 alias py=python
 alias py3=python3
