@@ -35,3 +35,9 @@ export DROPBOX_PATH="$SHARED_PATH/Dropbox"
 export PROJECTS_PATH="$SHARED_PATH/projects"
 export CUR_PROJECT_PATH="$PROJECTS_PATH/project_x/"
 export GIT_REP_PATH="/media/chhoffmann/HDD_SHARING/repo/git/"
+
+# export for arudino 
+# http://hardwarefun.com/tutorials/compiling-arduino-sketches-using-makefile
+export ARDUINO_DIR="$HOME/shared/bin/arduino"
+export ARDMK_DIR="$HOME/shared/github/3rd/Arduino-Makefile"
+export AVR_TOOLS_DIR="/usr"
