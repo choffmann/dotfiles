@@ -6,6 +6,10 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+# Development
+# count line of codes
+alias cloc='function _loc(){ find . -iname "*.$1" -exec wc -l {} +; }; _loc'
+
 # Shortcuts
 alias cdg="cd $GITHUB_PATH"
 alias cdg-chirs="cd $GITHUB_PATH/chris"
