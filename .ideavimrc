@@ -1,0 +1,27 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+""" Map leader to space ---------------------
+let mapleader=" "
+
+nmap <Tab> <action>(NextTab)
+nmap <S-Tab> <action>(PreviousTab)
+nmap <leader>a <action>(Run)
+nmap <leader>x <action>(CloseEditor)
+nmap <leader>t <action>(ActivateTerminalToolWindow)
+nmap <leader>l <action>(ReformatCode)
+nmap <leader>r <action>(RenameElement)
+
+set number
+set relativenumber
+set ideajoin
+set ignorecase
+
+""" NERDTree ----------------------------
+set NERDTree
+map <C-n> :NERDTree<CR>
+
+""" Plugins -----------------------------
+set surround
+set highlightedyank
