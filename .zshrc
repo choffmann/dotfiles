@@ -18,9 +18,10 @@ alias vim=nvim
 alias clr=clear
 alias k=kubectl
 alias kctx=kubectx
-alias kns=kubectl config set-context --current --namespace 
+alias kns="kubectl config set-context --current --namespace "
 alias spotify="chromium --profile-directory=Default --app-id=pjibgclleladliembfgfagdaldikeohf --app-launch-url-for-shortcuts-menu-item=https://open.spotify.com/intl-de" 
 alias open=xdg-open
+alias dotfiles="cd ~/dotfiles"
 
 # fzf
 source /usr/share/fzf/completion.zsh
