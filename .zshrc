@@ -30,5 +30,8 @@ source /usr/share/fzf/key-bindings.zsh
 export PATH="$PATH:$(yarn global bin)"
 export PATH=~/.cargo/bin:$PATH
 
-#Star Ship
+# Star Ship
 eval "$(starship init zsh)"
+
+# Zoxide
+eval "$(zoxide init zsh)"
