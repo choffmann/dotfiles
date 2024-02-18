@@ -23,6 +23,9 @@ alias spotify="chromium --profile-directory=Default --app-id=pjibgclleladliembfg
 alias open=xdg-open
 alias dotfiles="cd ~/dotfiles"
 
+alias reboot="sudo reboot now"
+alias shutdown="sudo shutdown now"
+
 # fzf
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
