@@ -35,3 +35,7 @@ eval "$(starship init zsh)"
 
 # Zoxide
 eval "$(zoxide init zsh)"
+
+# fnm
+export PATH="/home/choffmann/.local/share/fnm:$PATH"
+eval "`fnm env`"
