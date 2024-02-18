@@ -2,14 +2,12 @@
 
 Das Programm [GNU Stow](https://www.gnu.org/software/stow/) synchronisiert die Dateien im Repository lokal. Das Repository muss sich im Home-Verzeichnis befinden.
 
-## Neuinstallation
-
-### Basics
+## Basics
 ```bash
 sudo pacman -S git stow kitty 
 ```
 
-### Terminal
+## Terminal
 ```bash
 # Packages
 sudo pacman -S starship fnm tmux fzf zoxide unzip fzf wget
@@ -23,21 +21,31 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 curl -fsSL https://fnm.vercel.app/install | bash
 ```
 
-### tmux
+## tmux
 ```bash
 sudo pacman -S tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 `<leader> + I` Installiert tmp plugins
 
-### Node.js, npm und yarn
+## NeoVim
+```
+sudo pacman -S nvim ripgrep lazygit
+```
+
+## Docker / Kubernetes
+```
+sudo pacman -S docker kubectl k9s kubectx
+```
+### Docker non-root user
+```bash
+sudo groupadd docke
+sudo usermod -aG docker $USER
+```
+
+## Node.js, npm und yarn
 ```bash
 sudo pacman -S nodejs npm
 npm install -g yarn
 yarn set version berry
-```
-
-### NeoVim
-```
-sudo pacman -S ripgrep lazygit
 ```
