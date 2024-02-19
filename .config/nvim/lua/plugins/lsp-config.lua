@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver", "dockerls" },
+        ensure_installed = { "lua_ls", "tsserver", "dockerls", "rust_analyzer" },
       })
     end,
   },
@@ -21,6 +21,7 @@ return {
       lspconfig.lua_ls.setup({capabilities = capabilities})
       lspconfig.tsserver.setup({capabilities = capabilities})
       lspconfig.dockerls.setup({capabilities = capabilities})
+      lspconfig.rust_analyser.setup({capabilities = capabilities})
 
       vim.keymap.set("n", "<C-K>", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
