@@ -21,6 +21,12 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 curl -fsSL https://fnm.vercel.app/install | bash
 ```
 
+### SSH Agent
+```bash
+systemctl --user enable --now ssh-agent
+ssh-add <path_to_ssh>
+```
+
 ## tmux
 ```bash
 sudo pacman -S tmux
