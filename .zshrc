@@ -22,6 +22,7 @@ alias kns="kubectl config set-context --current --namespace "
 alias spotify="chromium --profile-directory=Default --app-id=pjibgclleladliembfgfagdaldikeohf --app-launch-url-for-shortcuts-menu-item=https://open.spotify.com/intl-de" 
 alias open=xdg-open
 alias dotfiles="cd ~/dotfiles"
+alias lg="lazygit"
 
 alias reboot="sudo reboot now"
 alias shutdown="sudo shutdown now"
