@@ -38,6 +38,13 @@
             "2": [],
         }
     },
+    "idle_inhibitor": {
+      "format": "{icon}",
+      "format-icons": {
+          "activated": " ",
+          "deactivated": "󰾪 "
+      }
+    },
     "memory": {
         "interval": 5,
         "format": " {}%",
@@ -64,14 +71,14 @@
     "network": {
         "format-wifi" : "{icon}",
         "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
-        "format-ethernet": "󰈀",
-	"format-alt" : "󱛇",
-        "format-disconnected" : "󰖪",
-	"tooltip-format-wifi": "{icon} {essid}\n󰛴{bandwidthDownBytes}  󰛶{bandwidthUpBytes}\n{ipaddr}",
+        "format-ethernet": "󰈀 ",
+	      "format-alt" : "󱛇 ",
+        "format-disconnected" : "󰖪 ",
+	      "tooltip-format-wifi": "{icon} {essid}\n󰛴{bandwidthDownBytes}  󰛶{bandwidthUpBytes}\n{ipaddr}",
         "tooltip-format-ethernet": "󰀂  {ifname}\n󰛴{bandwidthDownBytes}  󰛶{bandwidthUpBytes}\n{ipaddr}",
-	"tooltip-format-disconnected": "Disconnected",
-	"interval": 5,
-	"nospacing": 1,
+        "tooltip-format-disconnected": "Disconnected",
+        "interval": 5,
+        "nospacing": 1,
     },
     "pulseaudio": {
         "format": "{icon}",
@@ -119,7 +126,7 @@
                 "󰁹"
             ]
         },
-        "format-full": "Charged ",
+        "format-full": "󰂅 ",
         "interval": 5,
         "states": {
             "warning": 20,
