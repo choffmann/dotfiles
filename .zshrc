@@ -23,6 +23,7 @@ alias spotify="chromium --profile-directory=Default --app-id=pjibgclleladliembfg
 alias open=xdg-open
 alias dotfiles="cd ~/dotfiles"
 alias lg="lazygit"
+alias hsfl-vpn="/opt/cisco/anyconnect/bin/vpnui"
 
 alias reboot="sudo reboot now"
 alias shutdown="sudo shutdown now"
