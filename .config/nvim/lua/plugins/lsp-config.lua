@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver", "dockerls", "rust_analyzer" },
+        ensure_installed = { "lua_ls", "tsserver", "dockerls", "rust_analyzer", "elixirls" },
       })
     end,
   },
@@ -18,10 +18,11 @@ return {
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({capabilities = capabilities})
-      lspconfig.tsserver.setup({capabilities = capabilities})
-      lspconfig.dockerls.setup({capabilities = capabilities})
-      lspconfig.rust_analyser.setup({capabilities = capabilities})
+      lspconfig.lua_ls.setup({ capabilities = capabilities })
+      lspconfig.tsserver.setup({ capabilities = capabilities })
+      lspconfig.dockerls.setup({ capabilities = capabilities })
+      lspconfig.rust_analyser.setup({ capabilities = capabilities })
+      lspconfig.elixirls.setup({ cmd = { "/home/choffmann/.local/share/nvim/mason/bin/elixir-ls" } })
 
       vim.keymap.set("n", "<C-K>", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})

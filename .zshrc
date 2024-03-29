@@ -46,3 +46,6 @@ export PATH="/home/choffmann/.local/share/fnm:$PATH"
 eval "`fnm env`"
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+# elixir asdf
+. /opt/asdf-vm/asdf.sh
