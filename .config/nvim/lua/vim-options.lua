@@ -44,3 +44,9 @@ vim.cmd("nnoremap <Tab>   >>")
 vim.cmd("nnoremap <S-Tab> <<")
 vim.cmd("vnoremap <Tab>   >><Esc>gv")
 vim.cmd("vnoremap <S-Tab> <<<Esc>gv")
+
+
+vim.cmd("nnoremap <A-j> :m .+1<CR>==")
+vim.cmd("nnoremap <A-k> :m .-2<CR>==")
+vim.cmd("vnoremap <A-j> :m '>+1<CR>gv=gv")
+vim.cmd("vnoremap <A-k> :m '<-2<CR>gv=gv")
