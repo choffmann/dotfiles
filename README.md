@@ -39,13 +39,21 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 sudo pacman -S nvim ripgrep lazygit
 ```
 
+### Elixir LSP
+```bash
+sudo pacman -S elixir
+yay -S asdf-vm
+```
+
+In Mason wird der Language Server installiert. In der Config von `nivm-lsp` muss der Pfad zum Skript angegeben werden, wo nicht `~` oder `$HOME` verwendet werden kann. Somit muss hier der komplette Pfad hinterlegt werden
+
 ## Docker / Kubernetes
 ```
 sudo pacman -S docker kubectl k9s kubectx
 ```
 ### Docker non-root user
 ```bash
-sudo groupadd docke
+sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 
