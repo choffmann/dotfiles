@@ -1,6 +1,7 @@
 return {
   {
     "hrsh7th/nvim-cmp",
+    event = 'InsertEnter',
     config = function()
       local cmp = require("cmp")
       require("luasnip.loaders.from_vscode").lazy_load()
@@ -17,7 +18,8 @@ return {
         },
         mapping = cmp.mapping.preset.insert({
           ["<A-Space>"] = cmp.mapping.complete(),
-          ["<CR>"] = cmp.config.disbale,
+          ['<C-n>'] = cmp.mapping.select_next_item(),
+          ['<C-p>'] = cmp.mapping.select_prev_item(),
         }),
         sources = cmp.config.sources({
           { name = "nvim_lsp" },

@@ -1,17 +1,46 @@
-vim.g.mapleader = " "
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+vim.g.have_nerd_font = true
+vim.opt.relativenumber = true
+vim.opt.mouse = 'a'
+vim.opt.clipboard = 'unnamedplus'
+vim.opt.undofile = true
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+-- Configure how new splits should be opened
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+vim.opt.scrolloff = 8
+
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
+vim.keymap.set('n', '<A-Space>', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+
+-- Set highlight on search, but clear on pressing <Esc> in normal mode
+vim.opt.hlsearch = true
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
-vim.cmd("set number relativenumber")
-vim.cmd("set scrolloff=8")
-vim.cmd("set clipboard+=unnamedplus")
 
-vim.cmd("nnoremap <C-j> <C-w>j")
-vim.cmd("nnoremap <C-k> <C-w>k")
-vim.cmd("nnoremap <C-h> <C-w>h")
-vim.cmd("nnoremap <C-l> <C-w>l")
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
 
 vim.cmd("nmap <Up>    <Nop>")
 vim.cmd("nmap <Down>  <Nop>")
@@ -44,7 +73,6 @@ vim.cmd("nnoremap <Tab>   >>")
 vim.cmd("nnoremap <S-Tab> <<")
 vim.cmd("vnoremap <Tab>   >><Esc>gv")
 vim.cmd("vnoremap <S-Tab> <<<Esc>gv")
-
 
 vim.cmd("nnoremap <A-j> :m .+1<CR>==")
 vim.cmd("nnoremap <A-k> :m .-2<CR>==")
