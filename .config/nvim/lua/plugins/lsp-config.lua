@@ -63,6 +63,9 @@ return {
           cmd = { "/home/choffmann/.local/share/nvim/mason/bin/elixir-ls" },
           capabilities = capabilities,
         },
+        bashls = {
+          capabilities = capabilities,
+        },
       }
 
       require("mason").setup()
@@ -72,6 +75,7 @@ return {
         "stylua", -- Used to format Lua code
         "prettier", -- Used to format JavaScript code
         "eslint_d", -- Used to lint JavaScript code
+        "beautysh", -- Used to format shell scripts
       })
       require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
