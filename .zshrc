@@ -27,6 +27,7 @@ alias hsfl-vpn="/opt/cisco/anyconnect/bin/vpnui"
 
 alias reboot="sudo reboot now"
 alias shutdown="sudo shutdown now"
+alias display="nwg-displays"
 
 # fzf
 source /usr/share/fzf/completion.zsh
