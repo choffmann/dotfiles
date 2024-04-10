@@ -35,6 +35,7 @@ source /usr/share/fzf/key-bindings.zsh
 
 export PATH="$PATH:$(yarn global bin)"
 export PATH=~/.cargo/bin:$PATH
+export PATH=/usr/local/texlive/2023/bin/x86_64-linux/:$PATH
 
 # Star Ship
 eval "$(starship init zsh)"
