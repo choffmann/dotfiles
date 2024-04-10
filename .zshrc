@@ -27,6 +27,7 @@ alias hsfl-vpn="/opt/cisco/anyconnect/bin/vpnui"
 
 alias reboot="sudo reboot now"
 alias shutdown="sudo shutdown now"
+alias hypr-logout="hyprctl dispatch exit"
 alias display="nwg-displays"
 
 # fzf
