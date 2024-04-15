@@ -5,13 +5,16 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+export EDITOR=nvim
+export SHELL=/bin/zsh
+
 # fnm
 export PATH="/home/choffmann/.local/share/fnm:$PATH"
 eval "`fnm env`"
 eval "$(fnm env --use-on-cd)"
 
 # tmux
-if [ "$TMUX" = "" ]; then tmux; fi
+# if [ "$TMUX" = "" ]; then tmux; fi
 
 # alias
 alias vim=nvim
@@ -49,6 +52,11 @@ export PATH="/home/choffmann/.local/share/fnm:$PATH"
 eval "`fnm env`"
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+# gem
+export GEM_HOME="/home/choffmann/.local/share/gem/ruby/3.0.0"
+export PATH="$GEM_HOME/bin:$PATH"
+
 
 # elixir asdf
 . /opt/asdf-vm/asdf.sh
