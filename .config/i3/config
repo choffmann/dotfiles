@@ -81,7 +81,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec $term
+bindsym $mod+w exec $term
 
 # kill focused window
 bindsym $mod+q kill
@@ -95,24 +95,22 @@ bindsym $mod+space exec --no-startup-id dmenu_run
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+# bindsym $mod+h focus left
+# bindsym $mod+j focus down
+# bindsym $mod+k focus up
+# bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+# bindsym $mod+Shift+h move left
+# bindsym $mod+Shift+j move down
+# bindsym $mod+Shift+k move up
+# bindsym $mod+Shift+l move right
 
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -125,12 +123,7 @@ bindsym $mod+- split h
 bindsym $mod+| split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+i fullscreen toggle
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -139,7 +132,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+x focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+  # bindsym $mod+a focus parent
 
 bindsym Shift+CTRL+n nop
 
@@ -168,28 +161,26 @@ workspace $spotify output $monitor2
 workspace $terminal output $monitor1
 
 # switch to workspace
-bindsym $mod+1 workspace $main
-bindsym $mod+2 workspace $web
-bindsym $mod+3 workspace $spotify
-bindsym $mod+4 workspace $terminal
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $mod+a workspace $main
+bindsym $mod+s workspace $web
+bindsym $mod+d workspace $spotify
+bindsym $mod+f workspace $terminal
+bindsym $mod+g workspace $ws5
+bindsym $mod+h workspace $ws6
+bindsym $mod+j workspace $ws7
+bindsym $mod+k workspace $ws8
+bindsym $mod+l workspace $ws9
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $main
-bindsym $mod+Shift+2 move container to workspace number $web
-bindsym $mod+Shift+3 move container to workspace number $spotify
-bindsym $mod+Shift+4 move container to workspace number $terminal
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+a move container to workspace number $main
+bindsym $mod+Shift+s move container to workspace number $web
+bindsym $mod+Shift+d move container to workspace number $spotify
+bindsym $mod+Shift+f move container to workspace number $terminal
+bindsym $mod+Shift+g move container to workspace number $ws5
+bindsym $mod+Shift+h move container to workspace number $ws6
+bindsym $mod+Shift+j move container to workspace number $ws7
+bindsym $mod+Shift+k move container to workspace number $ws8
+bindsym $mod+Shift+l move container to workspace number $ws9
 
 assign [class="Chromium" instance="chromium"] $web
 assign [class="Spotify" instance="spotify"] $spotify
