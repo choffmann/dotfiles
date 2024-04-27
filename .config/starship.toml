@@ -38,7 +38,7 @@ format = 'via [$symbol]($style)'
 format = 'via [$symbol]($style)'
 
 [golang]
-format = 'via [$symbol]($style)'
+format = 'via  ($style)'
 
 [gradle]
 format = 'via [$symbol]($style)'

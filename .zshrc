@@ -57,6 +57,8 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export GEM_HOME="/home/choffmann/.local/share/gem/ruby/3.0.0"
 export PATH="$GEM_HOME/bin:$PATH"
 
-
 # elixir asdf
 . /opt/asdf-vm/asdf.sh
+
+# golang
+export PATH="$(go env GOPATH)/bin:$PATH"
