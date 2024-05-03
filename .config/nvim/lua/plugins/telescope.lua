@@ -51,6 +51,10 @@ return {
       vim.keymap.set("n", "<leader>sn", function()
         builtin.find_files({ cwd = vim.fn.stdpath("config") })
       end, { desc = "[S]earch [N]eovim files" })
+
+      vim.keymap.set("n", "<leader>so", function()
+        builtin.find_files({ cwd = vim.fn.expand("~/obsidian") })
+      end, { desc = "[S]earch [O]bsidian files" })
     end,
   },
   {
