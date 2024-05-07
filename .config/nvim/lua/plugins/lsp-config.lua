@@ -72,6 +72,27 @@ return {
         tailwindcss = {
           capabilities = capabilities,
         },
+        jdtls = {
+          capabilities = capabilities,
+        },
+        jsonls = {
+          capabilities = capabilities,
+        },
+        yamlls = {
+          capabilities = capabilities,
+        },
+        html = {
+          capabilities = capabilities,
+        },
+        cssls = {
+          capabilities = capabilities,
+        },
+        graphql = {
+          capabilities = capabilities,
+        },
+        clangd = {
+          capabilities = capabilities,
+        },
       }
 
       require("mason").setup()
