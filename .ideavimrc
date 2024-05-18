@@ -10,8 +10,13 @@ nmap <S-Tab> <action>(PreviousTab)
 nmap <leader>a <action>(Run)
 nmap <leader>x <action>(CloseEditor)
 nmap <leader>t <action>(ActivateTerminalToolWindow)
-nmap <leader>l <action>(ReformatCode)
+nmap <leader>cf <action>(ReformatCode)
 nmap <leader>r <action>(RenameElement)
+
+nmap K {
+nmap J }
+nmap H ^
+nmap L $
 
 set number
 set relativenumber

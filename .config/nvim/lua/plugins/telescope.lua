@@ -13,7 +13,7 @@ return {
       table.insert(vimgrep_arguments, "--glob")
       table.insert(vimgrep_arguments, "!**/.git/*")
 
-      telescope.load_extension("noice")
+      -- telescope.load_extension("noice")
       telescope.setup({
         defaults = {
           i = {
