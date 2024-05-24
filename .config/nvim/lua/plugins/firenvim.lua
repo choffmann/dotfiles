@@ -1,21 +1,31 @@
 return {
-    'glacambre/firenvim',
+  "glacambre/firenvim",
+  lazy = not vim.g.started_by_firenvim,
+  build = function()
+    vim.fn["firenvim#install"](0)
+  end,
+  config = function()
+    vim.g.firenvim_config = {
+      localSettings = {
+        [".*"] = { takeover = "never" },
+      },
+    }
 
-    -- Lazy load firenvim
-    -- Explanation: https://github.com/folke/lazy.nvim/discussions/463#discussioncomment-4819297
-    lazy = not vim.g.started_by_firenvim,
-    build = function()
-        vim.fn["firenvim#install"](0)
-    end,
-    config = function()
-        vim.g.firenvim_config = {
-            localSettings = {
-                ['.*'] = {
-                    cmdline = 'neovim',
-                    priority = 0,
-                    selector = 'textarea',
-                },
-            },
-        }
-    end
+    vim.api.nvim_create_autocmd({ "UIEnter" }, {
+      callback = function(event)
+        local client = vim.api.nvim_get_chan_info(vim.v.event.chan).client
+        if client ~= nil and client.name == "Firenvim" then
+          vim.o.laststatus = 0
+          vim.cmd.colorscheme("nord")
+          vim.cmd("set guifont=JetBrainsMono\\ NFM:h12")
+        end
+      end,
+    })
+
+
+    vim.api.nvim_create_autocmd({ "BufEnter" }, {
+      pattern = "github.com_*.txt",
+      command = "set filetype=markdown",
+    })
+  end,
 }

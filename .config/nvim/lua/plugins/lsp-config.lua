@@ -29,6 +29,9 @@ return {
           map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
           map("<C-K>", vim.lsp.buf.hover, "Hover Documentation")
           map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
+          map("<leader>td", vim.lsp.buf.type_definition, "Type [D]efinition")
+          map("<leader>cR", vim.lsp.buf.code_action, "[C]ode [R]efactor")
+          map("<leader>h", function () vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end, "[H]int inlay")
 
           local client = vim.lsp.get_client_by_id(event.data.client_id)
           if client and client.server_capabilities.documentHighlightProvider then
@@ -52,6 +55,18 @@ return {
         },
         tsserver = {
           capabilities = capabilities,
+          settings = {
+            typescript = {
+              inlayHints = {
+                includeInlayEnumMemberValueHints = true,
+                includeInlayFunctionLikeReturnTypeHints = true,
+                includeInlayParameterNameHints = 'all',
+                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                includeInlayPropertyDeclarationNameHints = true,
+                includeInlayVariableTypeHints = true,
+              },
+            },
+          },
         },
         dockerls = {
           capabilities = capabilities,
