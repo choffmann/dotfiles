@@ -105,3 +105,8 @@ vim.keymap.set(
     "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
 )
 
+vim.keymap.set(
+    "n",
+    "<leader>ei",
+    "Iif <Esc>A; err != nil {<CR>}<Esc>Oreturn err<Esc>"
+)
