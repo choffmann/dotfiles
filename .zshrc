@@ -33,6 +33,11 @@ alias shutdown="sudo shutdown now"
 alias hypr-logout="hyprctl dispatch exit"
 alias display="nwg-displays"
 
+alias tpp="~/dotfiles/scripts/tpp_ngrok.sh"
+alias tpp-kill="pkill ngrok"
+
+alias tmux-sessionizer="~/dotfiles/scripts/tmux-sessionizer.sh"
+
 # fzf
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
@@ -62,3 +67,6 @@ export PATH="$GEM_HOME/bin:$PATH"
 
 # golang
 export PATH="$(go env GOPATH)/bin:$PATH"
+
+source /home/choffmann/dotfiles/scripts/ssh_startup.sh
+
