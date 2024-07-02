@@ -70,3 +70,13 @@ export PATH="$(go env GOPATH)/bin:$PATH"
 
 source /home/choffmann/dotfiles/scripts/ssh_startup.sh
 
+
+# yazi
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
