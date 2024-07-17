@@ -102,11 +102,6 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set(
     "n",
     "<leader>ee",
-    "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
+    "<cmd>GoIfErr<CR>"
 )
 
-vim.keymap.set(
-    "n",
-    "<leader>ei",
-    "Iif <Esc>A; err != nil {<CR>}<Esc>Oreturn err<Esc>"
-)
