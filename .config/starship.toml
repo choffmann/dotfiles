@@ -1,3 +1,5 @@
+right_format = """$kubernetes"""
+
 [bun]
 format = "via [$symbol]($style)"
 
@@ -123,3 +125,16 @@ format = 'via [$symbol]($style)'
 
 [zig]
 format = 'via [$symbol]($style)'
+
+[kubernetes]
+format = '[$symbol$context( \($namespace\))]($style)'
+disabled = false
+contexts = [
+    { context_pattern = ".*DEVELOP.*", style = "green", context_alias = "@efabsw-dev"},
+    { context_pattern = ".*stage.*", style = "green", context_alias = "@efabsw-stage"},
+    { context_pattern = ".*green-ecolution.*", style = "green", context_alias = "@green-ecolution"},
+    { context_pattern = ".*PROD.*", style = "red", symbol = "🚨🚨", context_alias = "@efabsw-prod"},
+]
+
+[aws]
+disabled = true
