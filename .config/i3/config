@@ -92,7 +92,8 @@ bindsym $mod+w exec $term
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+space exec --no-startup-id dmenu_run 
+# bindsym $mod+space exec --no-startup-id dmenu_run 
+bindsym $mod+space exec --no-startup-id rofi -show drun
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -240,7 +241,7 @@ mode "$mode_system" {
 
 bindsym Ctrl+$mod+l exec --no-startup-id $i3lockwall, mode "default"
 
-bindsym $mod+BackSpace mode "$mode_system"
+bindsym $mod+minus mode "$mode_system"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
