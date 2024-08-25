@@ -105,3 +105,8 @@ vim.keymap.set(
     "<cmd>GoIfErr<CR>"
 )
 
+
+vim.keymap.set("n", "<leader>bd", "<cmd>bd<CR>", { desc = "[B]uffer [D]elete" })
+vim.keymap.set("n", "<leader>bn", "<cmd>bn<CR>", { desc = "[B]uffer [N]ext" })
+vim.keymap.set("n", "<leader>bp", "<cmd>bp<CR>", { desc = "[B]uffer [P]revious" })
+
