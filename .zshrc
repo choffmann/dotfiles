@@ -38,6 +38,8 @@ alias tpp-kill="pkill ngrok"
 
 alias tmux-sessionizer="~/dotfiles/scripts/tmux-sessionizer.sh"
 
+alias clip="xclip -selection clipboard"
+
 # fzf
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
