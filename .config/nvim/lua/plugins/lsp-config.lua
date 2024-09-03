@@ -160,6 +160,9 @@ return {
         clangd = {
           capabilities = capabilities,
         },
+        nil_ls = {
+          capabilities = capabilities,
+        },
       }
 
       require("mason").setup()
@@ -170,7 +173,7 @@ return {
         "prettier", -- Used to format JavaScript code
         "eslint_d", -- Used to lint JavaScript code
         "beautysh", -- Used to format shell scripts
-				"golangci-lint", 
+				"golangci-lint",
       })
       require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
